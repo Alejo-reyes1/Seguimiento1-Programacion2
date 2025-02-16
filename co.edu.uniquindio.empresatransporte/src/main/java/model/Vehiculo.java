@@ -8,7 +8,7 @@ public class Vehiculo {
     private String marca;
     private String color;
     private String numeroChasis;
-    private ArrayList<Propietario> propietariosAsociados;
+    private ArrayList<Propietario> ListaPropietariosAsociados;
     private Propietario propietarioPrincipal;
 
     public Vehiculo(String placa, String modelo, String marca, String color, String numeroChasis) {
@@ -17,12 +17,12 @@ public class Vehiculo {
         this.marca = marca;
         this.color = color;
         this.numeroChasis = numeroChasis;
-        this.propietariosAsociados=new ArrayList<>();
+        this.ListaPropietariosAsociados =new ArrayList<>();
     }
 
     public Vehiculo(String placa) {
         this.placa = placa;
-        this.propietariosAsociados=new ArrayList<>();
+        this.ListaPropietariosAsociados =new ArrayList<>();
     }
 
     public String getPlaca() {
@@ -61,14 +61,14 @@ public class Vehiculo {
     public void setPropietarioPrincipal(Propietario propietarioPrincipal) {
         this.propietarioPrincipal = propietarioPrincipal;
     }
-    public ArrayList<Propietario> getPropietariosAsociados() {
-        return propietariosAsociados;
+    public ArrayList<Propietario> getListaPropietariosAsociados() {
+        return ListaPropietariosAsociados;
     }
-    public void setPropietariosAsociados(ArrayList<Propietario> propietariosAsociados) {
-        this.propietariosAsociados = propietariosAsociados;
+    public void setListaPropietariosAsociados(ArrayList<Propietario> listaPropietariosAsociados) {
+        this.ListaPropietariosAsociados = listaPropietariosAsociados;
     }
     public void asociarPropietario(Propietario p) {
-        this.propietariosAsociados.add(p);
+        this.ListaPropietariosAsociados.add(p);
     }
 
 }

@@ -115,4 +115,24 @@ public class EmpresaTransporte {
     public void asociarUsuarioConVehiculoTransporte(VehiculoTransporte vehiculo,Usuario usuario) {
         vehiculo.asociarUsuarioPasajero(usuario);
     }
+    public String listaUsuariosConPesoSuperior(int peso) {
+        String listaUsuarios="";
+        for(Usuario usuario:this.listausuarios){
+            if(usuario.getPeso()>peso){
+                listaUsuarios+=usuario.getNombre()+"\n";
+            }
+        }
+
+        return listaUsuarios;
+    }
+    public int numeroPropietariosMayor40(){
+        int numeroPropietariosMayor40=0;
+        for(Propietario propietario:this.listaPropietarios){
+            if(Integer.parseInt(propietario.getEdad())>40){
+                numeroPropietariosMayor40++;
+            }
+        }
+
+        return numeroPropietariosMayor40;
+    }
 }
