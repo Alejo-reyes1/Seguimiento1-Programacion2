@@ -12,6 +12,10 @@ public class VehiculoTransporte extends Vehiculo {
         this.maximoPasajeros = maximoPasajeros;
         this.usuarioAsociados=new ArrayList<>();
     }
+    public VehiculoTransporte(String placa){
+        super(placa);
+        this.usuarioAsociados=new ArrayList<>();
+    }
 
     public int getMaximoPasajeros() {
         return maximoPasajeros;
@@ -27,4 +31,5 @@ public class VehiculoTransporte extends Vehiculo {
     public void asociarUsuarioPasajero(Usuario u) {
         this.usuarioAsociados.add(u);
     }
+
 }

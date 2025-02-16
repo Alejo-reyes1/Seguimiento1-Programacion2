@@ -18,7 +18,7 @@ public class mainTransporte {
                 "2.Crear vehiculo carga\n"+
                 "3.Asociar un propietario con un vehiculo\n"+
                 "4.Agregar usuario a vehiculo transportista\n"+
-                "5.Calcular el total de pasajeros transportados en un día";
+                "5.Calcular el total de pasajeros transportados en un día\n6.Salir del programa\n";
         int opcionSeleccionada = 0;
         do {
             opcionSeleccionada = Integer.parseInt(JOptionPane.showInputDialog(null,menuPrincipal));
@@ -35,6 +35,8 @@ public class mainTransporte {
         Propietario propietario2 = new Propietario("Ana Gómez", "0987654321", "ana.gomez@email.com", "30", "0912345678");
         VehiculoCarga vehiculo1 = new VehiculoCarga("ABC123", "2021", "Volvo", "Blanco", "CHS123456789", 15000, 4);
         VehiculoTransporte vehiculo3 = new VehiculoTransporte("VAN789", "2022", "Hyundai", "Azul", "CHS5566778899", 15);
+        VehiculoTransporte vehiculoTransporte1= new VehiculoTransporte("asd123");
+        empresaTransporte.agregarVehiculoTransportador(vehiculoTransporte1);
         empresaTransporte.agregarUsuario(usuario2);
         empresaTransporte.agregarUsuario(usuario1);
         empresaTransporte.agregarPropietario(propietario2);
@@ -78,6 +80,7 @@ public class mainTransporte {
     }
 
     private static void calcularPasajerosTransportados(EmpresaTransporte empresaTransporte) {
+        JOptionPane.showMessageDialog(null,"la Lista de vehiculos transportista son\n"+empresaTransporte.listaVehiculosTransporte());
         String placaVehiculo=JOptionPane.showInputDialog("Ingrese la placa del vehiculo transportador");
         VehiculoTransporte vehiculo=empresaTransporte.buscarVehiculoTransporte(placaVehiculo);
         JOptionPane.showMessageDialog(null, "La cantidad de pasajeros que ha transportado el vehiculo con placas "+ vehiculo.getPlaca()+" es de:\n"+
@@ -108,6 +111,7 @@ public class mainTransporte {
     }
 
     private static void asociarVehiculoPropietario(EmpresaTransporte empresaTransporte) {
+
         String identificacionPropietario=JOptionPane.showInputDialog("Ingrese la cedula del propietario");
         String placaVehiculo=JOptionPane.showInputDialog("Ingrese la placa del vehiculo a asociar con el propietario");
         Propietario propietario=empresaTransporte.buscarPropietario(identificacionPropietario);

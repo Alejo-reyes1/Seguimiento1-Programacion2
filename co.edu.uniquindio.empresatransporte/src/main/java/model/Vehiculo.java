@@ -19,6 +19,12 @@ public class Vehiculo {
         this.numeroChasis = numeroChasis;
         this.propietariosAsociados=new ArrayList<>();
     }
+
+    public Vehiculo(String placa) {
+        this.placa = placa;
+        this.propietariosAsociados=new ArrayList<>();
+    }
+
     public String getPlaca() {
         return placa;
     }

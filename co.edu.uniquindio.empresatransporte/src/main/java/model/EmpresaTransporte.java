@@ -115,6 +115,4 @@ public class EmpresaTransporte {
     public void asociarUsuarioConVehiculoTransporte(VehiculoTransporte vehiculo,Usuario usuario) {
         vehiculo.asociarUsuarioPasajero(usuario);
     }
-
-
 }
