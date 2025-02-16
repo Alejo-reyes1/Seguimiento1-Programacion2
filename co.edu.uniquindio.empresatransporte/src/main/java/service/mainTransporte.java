@@ -96,6 +96,7 @@ public class mainTransporte {
         empresaTransporte.agregarUsuario(newUsuario);
         String placa=JOptionPane.showInputDialog("Ingrese la placa del vehiculo transportista, los vehiculos registrados son\n"+empresaTransporte.listaVehiculosTransporte());
         VehiculoTransporte vehiculo=empresaTransporte.buscarVehiculoTransporte(placa);
+        empresaTransporte.asociarUsuarioConVehiculoTransporte(vehiculo,newUsuario);
         JOptionPane.showMessageDialog(null, "El usuario fue asociado exitosamente y actualmente cuenta con un transporte de "+vehiculo.calcularPasajerosTransportados());
     }
 
